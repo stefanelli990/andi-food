@@ -6,7 +6,7 @@
       <p v-else-if="isDraw">It's a draw!</p>
       <p v-else>Current Player: {{ xIsNext ? 'Player One (X)' : 'Player Two (O)' }}</p>
     </div>
-    <div class="grid grid-cols-3 border border-white mb-6 mt-4 mx-4" @click="triggerAnimation" :class="{'animate-wiggle': wiggleAnimation}">
+    <div class="grid grid-cols-3 mb-6 mt-4 mx-4 border border-white" @click="triggerAnimation" :class="{'animate-wiggle': wiggleAnimation}">
       <div
         v-for="(cell, index) in cells"
         :key="index"
