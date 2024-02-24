@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Caveat:wght@400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 
- <!-- Link Swiper's CSS -->
- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/styles.css">
@@ -18,7 +18,7 @@
     <header id="header">
         <div class="container">
             <a href="#">
-                <img class="logo" src="assets/logo.svg" alt="Company Logo">
+                <img class="logo" src="assets/logo-white.svg" alt="Company Logo">
             </a>
             <ul class="nav-links">
                 <li>
@@ -41,13 +41,33 @@
             </button>
         </div>
     </header>
+
+    <div class="hamburger-menu">
+        <nav>
+            <ul class="nav-links">
+                <li>
+                    <a href="#hero" class="nav-link active">Naslovna</a>
+                </li>
+                <li>
+                    <a href="#about" class="nav-link">O Nama</a>
+                </li>
+                <li>
+                    <a href="#services" class="nav-link">Usluge</a>
+                </li>
+                <li>
+                    <a href="#contact" class="nav-link">Kontakt</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
     <main>
         <section id="hero">
             <div class="container">
                 <div class="hero-content">
                     <h1>Nasleđe Ukusa, Tradicija Kvaliteta</h1>
                     <p>Više od decenije posvećenosti prirodnom bogatstvu naših šuma, Andi Food je vaš pouzdan izbor za autentične ukuse šumskih plodova.</p>
-                    <a href="#" class="btn">Saznajte Više</a>
+                    <a href="#about" class="btn">Saznajte Više</a>
                 </div>
             </div>
         </section>
@@ -137,31 +157,31 @@
                 </div>
                 <ul>
                     <li>
-                        <img src="assets/services-vector-1.svg" alt="">
+                        <img class="blob blob-1" src="assets/services-vector-4.svg" alt="">
                         <img src="assets/mushrooms.png" alt="">
                         <h4>Pečurke</h4>
-                        <p>Naša pažljivo odabrana kolekcija pečuraka obećava bogatstvo ukusa i teksture, brižno odabranih kako bi pružile jedinstveni gastronomski doživljaj.</p>
+                        <p>Pažljivo odabrana kolekcija pečuraka obećava bogatstvo ukusa i teksture, brižno odabranih kako bi pružile jedinstveni gastronomski doživljaj.</p>
                     </li>
                     <li>
-                        <img src="assets/services-vector-2.svg" alt="">
+                        <img class="blob blob-2" src="assets/services-vector-4.svg" alt="">
                         <img src="assets/raspberries.png" alt="">
                         <h4>Maline</h4>
                         <p>Ukus svake naše maline nosi miris sunčanih polja i osvežavajući ukus, svaka pažljivo odabrana kako bi vam pružila najfiniji letnji doživljaj voća u svakom zalogaju.</p>
                     </li>
                     <li>
-                        <img src="assets/services-vector-3.svg" alt="">
+                        <img class="blob blob-3" src="assets/services-vector-4.svg" alt="">
                         <img src="assets/blackberries.png" alt="">
                         <h4>Kupine</h4>
                         <p>Sa našim kupinama dobijate više od voća - dobijate autentično voćno iskustvo koje oduševljava svežinom, sočnošću i intenzivnim ukusom svake bobice.</p>
                     </li>
                     <li>
-                        <img src="assets/services-vector-4.svg" alt="">
+                        <img class="blob blob-4" src="assets/services-vector-4.svg" alt="">
                         <img src="assets/strawberries.png" alt="">
                         <h4>Divlje jagode</h4>
                         <p>Savršena kombinacija slatkoće i svežine čini divlje jagode neodoljivim izborom, pažljivo biranim iz najboljih izvora za uživanje u svakom zalogaju.</p>
                     </li>
                     <li>
-                        <img src="assets/services-vector-5.svg" alt="">
+                        <img class="blob blob-5" src="assets/services-vector-4.svg" alt="">
                         <img src="assets/blueberries.png" alt="">
                         <h4>Borovnice</h4>
                         <p>Otkrijte neodoljivu slast i osvežavajuću aromu naših borovnica, svaka pažljivo selektovana da pruži vrhunski ukus i zadovoljstvo.</p>
@@ -174,13 +194,13 @@
                 <div class="section-header-center">
                     <h2>Siguran put do najboljih šumskih plodova</h2>
                     <p>Kada se odlučite za Andi Food, birate ne samo najbolje šumske plodove, već i siguran put ka njima. Naša posvećenost kvalitetu, svežini i sigurnosti je neprolazna, što nas čini vašim pouzdanim partnerom u potrazi za autentičnim ukusima prirode. Pružite sebi najbolje što priroda može ponuditi. Doživite svu raskoš i autentičnost šumskih plodova uz Andi Food - vaš siguran put ka najboljim šumskim plodovima.</p>
-                    <a href="#" class="btn">Kontaktirajte Nas</a>
                 </div>
+                <a href="#contact" class="btn">Kontaktirajte Nas</a>
             </div>
         </section>
         <section id="contact">
             <div class="container">
-                <div class="contact-content">
+                <div class="contact-heading">
                     <h3>Kontakt</h3>
                     <h2>Naša vrata su uvek otvorena za vas</h2>
                     <p>Ukoliko imate pitanja ili želite da saznate više o našim proizvodima i uslugama, ne ustručavajte se da nas kontaktirate. Stojimo na raspolaganju.</p>

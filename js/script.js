@@ -1,3 +1,11 @@
+const toggleBtn = document.querySelector('.toggle-btn')
+const hamburgerMenu = document.querySelector('.hamburger-menu')
+
+toggleBtn.addEventListener('click', () => {
+  hamburgerMenu.classList.toggle('active')
+})
+
+
 // copyright date 
 
 const copyrightYear = document.getElementById('copyright-year')
@@ -6,6 +14,7 @@ let year = d.getFullYear()
 
 copyrightYear.innerText = year
 
+// swiper
 
 const swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
