@@ -11,7 +11,7 @@
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Main CSS -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -21,23 +21,22 @@
                 <img class="logo" src="assets/logo-white.svg" alt="Company Logo">
             </a>
             <ul class="nav-links">
+                <div class="scroll-spy"></div>
                 <li>
                     <a href="#hero" class="nav-link active">Naslovna</a>
                 </li>
                 <li>
-                    <a href="#about" class="nav-link">O Nama</a>
+                    <a href="#about" class="nav-link active">O Nama</a>
                 </li>
                 <li>
-                    <a href="#services" class="nav-link">Usluge</a>
+                    <a href="#services" class="nav-link active">Usluge</a>
                 </li>
                 <li>
-                    <a href="#contact" class="nav-link">Kontakt</a>
+                    <a href="#contact" class="nav-link active">Kontakt</a>
                 </li>
             </ul>
-            <button class="toggle-btn">
-                <div class="bar-1"></div>
-                <div class="bar-2"></div>
-                <div class="bar-3"></div>
+            <button class="open-menu-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24"><path fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.5" d="M20 7H4m16 5H4m16 5H4"/></svg>
             </button>
         </div>
     </header>
@@ -46,7 +45,13 @@
         <nav>
             <ul class="nav-links">
                 <li>
-                    <a href="#hero" class="nav-link active">Naslovna</a>
+                    <button class="close-menu-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="#fff" d="m12 13.414l5.657 5.657a1 1 0 0 0 1.414-1.414L13.414 12l5.657-5.657a1 1 0 0 0-1.414-1.414L12 10.586L6.343 4.929A1 1 0 0 0 4.93 6.343L10.586 12l-5.657 5.657a1 1 0 1 0 1.414 1.414z"/></g>
+                        </svg>
+                    </button>
+                </li>
+                <li>
+                    <a href="#hero" class="nav-link">Naslovna</a>
                 </li>
                 <li>
                     <a href="#about" class="nav-link">O Nama</a>
@@ -60,9 +65,10 @@
             </ul>
         </nav>
     </div>
+    <div class="hamburger-overlay"></div>
 
     <main>
-        <section id="hero">
+        <section class="sections" id="hero">
             <div class="container">
                 <div class="hero-content">
                     <h1>Nasleđe Ukusa, Tradicija Kvaliteta</h1>
@@ -71,7 +77,7 @@
                 </div>
             </div>
         </section>
-        <section id="about">
+        <section class="sections" id="about">
             <div class="container">
                 <div class="section-header-center">
                     <h3>O Nama</h3>
@@ -107,24 +113,6 @@
                       </div>
                     </div>
                   </div>
-                    <!-- <div class="about-counter">
-                        <div class="about-counter-item">
-                            <img src="assets/counter-vector-1.svg" alt="">
-                            <h3>30+</h3>
-                            <p>Godina postojanja</p>
-                        </div>
-                        <div class="about-counter-item">
-                            <img src="assets/counter-vector-2.svg" alt="">
-                            <h3>100+</h3>
-                            <p>Tone plodova godišnje</p>
-                        </div>
-                        <div class="about-counter-item">
-                            <img src="assets/counter-vector-3.svg" alt="">
-                            <h3>1000+</h3>
-                            <p>Zadovoljnih kupaca</p>
-                        </div>
-                    </div> -->
-              
             </div>
         </section>
         <section id="benefits">
@@ -148,7 +136,7 @@
                 </ul>
             </div>
         </section>
-        <section id="services">
+        <section class="sections" id="services">
             <div class="container">
                 <div class="section-header-center">
                     <h3>Usluge</h3>
@@ -157,7 +145,7 @@
                 </div>
                 <ul>
                     <li>
-                        <img class="blob blob-1" src="assets/services-vector-4.svg" alt="">
+                        <img class="blob blob-1" src="assets/services-vector-1.svg" alt="">
                         <img src="assets/mushrooms.png" alt="">
                         <h4>Pečurke</h4>
                         <p>Pažljivo odabrana kolekcija pečuraka obećava bogatstvo ukusa i teksture, brižno odabranih kako bi pružile jedinstveni gastronomski doživljaj.</p>
@@ -169,7 +157,7 @@
                         <p>Ukus svake naše maline nosi miris sunčanih polja i osvežavajući ukus, svaka pažljivo odabrana kako bi vam pružila najfiniji letnji doživljaj voća u svakom zalogaju.</p>
                     </li>
                     <li>
-                        <img class="blob blob-3" src="assets/services-vector-4.svg" alt="">
+                        <img class="blob blob-3" src="assets/services-vector-1.svg" alt="">
                         <img src="assets/blackberries.png" alt="">
                         <h4>Kupine</h4>
                         <p>Sa našim kupinama dobijate više od voća - dobijate autentično voćno iskustvo koje oduševljava svežinom, sočnošću i intenzivnim ukusom svake bobice.</p>
@@ -181,7 +169,7 @@
                         <p>Savršena kombinacija slatkoće i svežine čini divlje jagode neodoljivim izborom, pažljivo biranim iz najboljih izvora za uživanje u svakom zalogaju.</p>
                     </li>
                     <li>
-                        <img class="blob blob-5" src="assets/services-vector-4.svg" alt="">
+                        <img class="blob blob-5" src="assets/services-vector-1.svg" alt="">
                         <img src="assets/blueberries.png" alt="">
                         <h4>Borovnice</h4>
                         <p>Otkrijte neodoljivu slast i osvežavajuću aromu naših borovnica, svaka pažljivo selektovana da pruži vrhunski ukus i zadovoljstvo.</p>
@@ -198,7 +186,7 @@
                 <a href="#contact" class="btn">Kontaktirajte Nas</a>
             </div>
         </section>
-        <section id="contact">
+        <section class="sections" id="contact">
             <div class="container">
                 <div class="contact-heading">
                     <h3>Kontakt</h3>
@@ -229,8 +217,12 @@
             <div class="container">
                 <p class="footer-copyright">&copy; <span id="copyright-year"></span> Andi Food. Developed by <a href="https://github.com/stefanelli990" target="_blank">Stefanelli990</a></p>
                 <div class="footer-social-links">
-                    <a href=""><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24"><path fill="currentColor" d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4z"/></svg>
+                    </a>
+                    <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"/></svg>
+                    </a>
                 </div>
             </div>
     </footer>
