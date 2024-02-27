@@ -7,11 +7,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Caveat:wght@400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-
-    <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-    <!-- Main CSS -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -71,11 +66,12 @@
         <section class="sections" id="hero">
             <div class="container">
                 <div class="hero-content">
-                    <h1>Nasleđe Ukusa, Tradicija Kvaliteta</h1>
+                    <h1>Otkrijte čarolije šume uz <span>Andi Food</span></h1>
                     <p>Više od decenije posvećenosti prirodnom bogatstvu naših šuma, Andi Food je vaš pouzdan izbor za autentične ukuse šumskih plodova.</p>
                     <a href="#about" class="btn">Saznajte Više</a>
                 </div>
             </div>
+            <img class="wavy-vector" src="assets/wavy-vector.svg" alt="">
         </section>
         <section class="sections" id="about">
             <div class="container">
@@ -85,34 +81,23 @@
                     <p>Andi Food je plod porodične strasti prema prirodnim ukusima. Sa počecima koji sežu daleko unazad, naša firma je rasla i razvijala se uz ljubav prema šumskim plodovima. Danas, nastavljamo tu tradiciju, kombinujući iskustvo sa svežinom i kvalitetom kako bismo vam pružili najbolje što priroda može ponuditi.</p>
                 </div>
 
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
+                <div class="about-grid">
+                    <div class="about-grid-item">
                         <img src="assets/about-img-1.jpg" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="assets/about-img-2.jpg" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="assets/about-img-3.jpg" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="assets/about-img-4.jpg" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="assets/about-img-5.jpg" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="assets/about-img-6.jpg" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="assets/about-img-7.jpg" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="assets/about-img-8.jpg" alt="">
-                      </div>
                     </div>
-                  </div>
+                    <div class="about-grid-item">
+                        <img src="assets/about-img-2.jpg" alt="">
+                    </div>
+                    <div class="about-grid-item">
+                        <img src="assets/about-img-3.jpg" alt="">
+                    </div>
+                    <div class="about-grid-item">
+                        <img src="assets/about-img-4.jpg" alt="">
+                    </div>
+                    <div class="about-grid-item">
+                        <img src="assets/about-img-5.jpg" alt="">
+                    </div>
+                </div>
             </div>
         </section>
         <section id="benefits">
@@ -191,21 +176,27 @@
                 <div class="contact-heading">
                     <h3>Kontakt</h3>
                     <h2>Naša vrata su uvek otvorena za vas</h2>
-                    <p>Ukoliko imate pitanja ili želite da saznate više o našim proizvodima i uslugama, ne ustručavajte se da nas kontaktirate. Stojimo na raspolaganju.</p>
+                    <p>Ukoliko imate pitanja ili želite da saznate više o našim uslugama, ne ustručavajte se da nas kontaktirate. Stojimo na raspolaganju.</p>
                 </div>
                 <div class="contact-divider"></div>
                 <div class="contact-info">
                     <ul>
                         <li>
-                            <div class="social-btn"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="social-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="m7.539 14.841l.003.003l.002.002a.755.755 0 0 0 .912 0l.002-.002l.003-.003l.012-.009a5.57 5.57 0 0 0 .19-.153a15.588 15.588 0 0 0 2.046-2.082C11.81 11.235 13 9.255 13 7A5 5 0 0 0 3 7c0 2.255 1.19 4.235 2.292 5.597a15.591 15.591 0 0 0 2.046 2.082a8.916 8.916 0 0 0 .189.153zM8 8.5a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3" clip-rule="evenodd"/></svg>
+                            </div>
                             <span>Nova Tibuška 15,<br>17501 Tibužde, Vranje</span>
                         </li>
                         <li>
-                            <div class="social-btn"><i class="fa-solid fa-phone"></i></div>
+                            <div class="social-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="m16.556 12.906l-.455.453s-1.083 1.076-4.038-1.862s-1.872-4.014-1.872-4.014l.286-.286c.707-.702.774-1.83.157-2.654L9.374 2.86C8.61 1.84 7.135 1.705 6.26 2.575l-1.57 1.56c-.433.432-.723.99-.688 1.61c.09 1.587.808 5 4.812 8.982c4.247 4.222 8.232 4.39 9.861 4.238c.516-.048.964-.31 1.325-.67l1.42-1.412c.96-.953.69-2.588-.538-3.255l-1.91-1.039c-.806-.437-1.787-.309-2.417.317"/></svg>
+                            </div>
                             <span>+381 (0)60 0418543</span>
                         </li>
                         <li>
-                            <div class="social-btn"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="social-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><path fill="currentColor" d="M32.33 6a2 2 0 0 0-.41 0h-28a2 2 0 0 0-.53.08l14.45 14.39Z" class="clr-i-solid clr-i-solid-path-1"/><path fill="currentColor" d="m33.81 7.39l-14.56 14.5a2 2 0 0 1-2.82 0L2 7.5a2 2 0 0 0-.07.5v20a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2V8a2 2 0 0 0-.12-.61M5.3 28H3.91v-1.43l7.27-7.21l1.41 1.41Zm26.61 0h-1.4l-7.29-7.23l1.41-1.41l7.27 7.21Z" class="clr-i-solid clr-i-solid-path-2"/><path fill="none" d="M0 0h36v36H0z"/></svg>
+                            </div>
                             <span>stojkovicruzica@icloud.com</span>
                         </li>
                     </ul>
@@ -217,10 +208,10 @@
             <div class="container">
                 <p class="footer-copyright">&copy; <span id="copyright-year"></span> Andi Food. Developed by <a href="https://github.com/stefanelli990" target="_blank">Stefanelli990</a></p>
                 <div class="footer-social-links">
-                    <a href="">
+                    <a href="https://www.facebook.com/profile.php?id=61556192972385" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24"><path fill="currentColor" d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4z"/></svg>
                     </a>
-                    <a href="">
+                    <a href="https://www.instagram.com/andi__food/" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"/></svg>
                     </a>
                 </div>
