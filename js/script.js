@@ -57,13 +57,13 @@ window.addEventListener('scroll', () => {
     if (scrollPosition >= top && scrollPosition < top + height) {
       console.log('In view:', section.id);
       if (section.id === 'about') {
-        scrollSpy.style.translate = '94px';
+        scrollSpy.style.translate = '105px';
       } else if (section.id === 'services') {
-        scrollSpy.style.translate = '158px';
+        scrollSpy.style.translate = '177px';
       } else if (section.id === 'contact') {
-        scrollSpy.style.translate = '221px';
+        scrollSpy.style.translate = '247px';
       } else if (section.id === 'hero') {
-        scrollSpy.style.translate = '22px';
+        scrollSpy.style.translate = '26px';
       }
     }
   })
