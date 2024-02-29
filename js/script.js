@@ -6,8 +6,6 @@ const closeMenuBtn = document.querySelector('.close-menu-btn')
 const hamburgerMenu = document.querySelector('.hamburger-menu')
 const hamburgerOverlay = document.querySelector('.hamburger-overlay')
 const body = document.querySelector('body')
-const scrollSpy = document.querySelector('.scroll-spy')
-const sections = document.querySelectorAll('.sections')
 
 openMenuBtn.addEventListener('click', () => {
   hamburgerMenu.classList.add('active')
@@ -35,42 +33,9 @@ navLinks.forEach(navLink => {
   })
 })
 
-
-// scrollspy animation
+// navbar animation
 window.addEventListener('scroll', () => {
 
-  const scrollPosition = window.scrollY;
-  const windowHeight = window.innerHeight;
-  const fullHeight = document.documentElement.scrollHeight;
-
-  // Check if the user has scrolled to the bottom of the page
-  if (scrollPosition + windowHeight >= fullHeight) {
-    console.log('Reached the bottom of the page!');
-    scrollSpy.style.translate = '221px'
-  }
-  
-  // slide scrollspy navlinks
-  sections.forEach(section => {
-    const top = section.offsetTop - 80;
-    const height = section.offsetHeight;
-
-    if (scrollPosition >= top && scrollPosition < top + height) {
-      console.log('In view:', section.id);
-      if (section.id === 'about') {
-        scrollSpy.style.translate = '105px';
-      } else if (section.id === 'services') {
-        scrollSpy.style.translate = '177px';
-      } else if (section.id === 'contact') {
-        scrollSpy.style.translate = '247px';
-      } else if (section.id === 'hero') {
-        scrollSpy.style.translate = '26px';
-      }
-    }
-  })
-  
-
-  
-  // navbar animation
   if (window.scrollY > 1) {
     header.classList.add('active')
     logo.setAttribute('src', 'assets/logo-green.svg')
@@ -82,10 +47,7 @@ window.addEventListener('scroll', () => {
 })
 
 
-
-
 // copyright date 
-
 const copyrightYear = document.getElementById('copyright-year')
 const d = new Date()
 let year = d.getFullYear()

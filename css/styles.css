@@ -93,34 +93,30 @@ button {
     gap: 16px;
     position: relative
 }
-.scroll-spy {
-    position: absolute;
-    height: 3px;
-    background-color: var(--primary-color);
-    width: 15px;
-    top: 25px;
-    border-radius: 50px;
-    translate: 26px;
-    transition: .3s;
-}
 
 #header .nav-link {
     color: var(--white-color);
     position: relative;
+    
 }
 
-/* #header .nav-link.active::after {
+#header .nav-link:hover:after  {
+    width: 40px;
+}
+
+#header .nav-link::after {
     content: '';
-    width: 15px;
+    width: 0;
     height: 3px; 
-    background-color: red;
+    background-color: var(--primary-color);
     position: absolute;
     top: 25px;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 45px;
     cursor: default;
-} */
+    transition: .3s;
+}
 
 /* hamburger menu */
 .hamburger-menu {
@@ -284,14 +280,17 @@ button {
 #cta {
     background-image: url('../assets/benefits-img.webp');
     background-color: var(--primary-color);
+    color: var(--white-color);
 }
 #cta .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: var(--white-color);
+   
     padding-top: 50px;
     padding-bottom: 50px;
+}
+
+#cta .btn-wrapper {
+    display: flex;
+    justify-content: center;
 }
 
 /* contact */
@@ -358,8 +357,8 @@ button {
 }
 #footer .footer-social-links a {
     color: var(--white-color);
-    height: 18px;
-    width: 18px;
+    height: 20px;
+    width: 20px;
 }
 
 /* Utility classes */
@@ -378,7 +377,7 @@ button {
     margin: 0 auto 16px;
 }
 .logo {
-    width: 60px;
+    width: 50px;
 }
 
 /* Buttons */
@@ -477,6 +476,9 @@ button {
 }
 
 @media(min-width: 992px) {
+    .logo {
+        width: 60px;
+    }
     .container {
         max-width: 992px;
     }
