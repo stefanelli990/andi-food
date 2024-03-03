@@ -1,51 +1,57 @@
 const header = document.querySelector('#header')
 const logo = document.querySelector('.logo')
 const navLinks = document.querySelectorAll('.nav-link')
-const openMenuBtn = document.querySelector('.open-menu-btn')
+const toggleBtn = document.querySelector('.toggle-btn')
 const closeMenuBtn = document.querySelector('.close-menu-btn')
-const hamburgerMenu = document.querySelector('.hamburger-menu')
-const hamburgerOverlay = document.querySelector('.hamburger-overlay')
-const body = document.querySelector('body')
+const menu = document.querySelector('.nav-links')
 
-openMenuBtn.addEventListener('click', () => {
-  hamburgerMenu.classList.add('active')
-  hamburgerOverlay.classList.add('active')
-  body.style.overflowY = 'hidden'
+// toggle menu
+toggleBtn.addEventListener('click', () => {
+  if(toggleBtn.classList.contains('active')) {
+    header.classList.remove('active')
+    toggleBtn.classList.remove('active')
+    menu.classList.remove('active')
+    logo.setAttribute('src', 'assets/logo-white.svg')
+    if(window.scrollY > 1) {
+      header.classList.add('active')
+      logo.setAttribute('src', 'assets/logo-green.svg')
+    }
+  } else {
+    header.classList.add('active')
+    menu.classList.add('active')
+    toggleBtn.classList.add('active')
+    logo.setAttribute('src', 'assets/logo-green.svg')
+  }
 })
 
-closeMenuBtn.addEventListener('click', () => {
-  hamburgerMenu.classList.remove('active')
-  hamburgerOverlay.classList.remove('active')
-  body.style.overflowY = 'auto'
-})
-
-hamburgerOverlay.addEventListener('click', () => {
-  hamburgerMenu.classList.remove('active')
-  hamburgerOverlay.classList.remove('active')
-  body.style.overflowY = 'auto'
-})
-
+// close menu by click on link 
 navLinks.forEach(navLink => {
   navLink.addEventListener('click', () => {
-    hamburgerMenu.classList.remove('active')
-    hamburgerOverlay.classList.remove('active')
-    body.style.overflowY = 'auto'
+    header.classList.remove('active')
+    toggleBtn.classList.remove('active')
+    menu.classList.remove('active')
+    logo.setAttribute('src', 'assets/logo-white.svg')
+    if(window.scrollY > 1) {
+      header.classList.add('active')
+      logo.setAttribute('src', 'assets/logo-green.svg')
+    }
   })
 })
 
-// navbar animation
+// navbar animation on scroll
 window.addEventListener('scroll', () => {
 
-  if (window.scrollY > 1) {
+  if (window.scrollY > 1 ) {
     header.classList.add('active')
     logo.setAttribute('src', 'assets/logo-green.svg')
-
+  } else if(window.scrollY < 1 && menu.classList.contains('active')) {
+    header.classList.add('active')
+    logo.setAttribute('src', 'assets/logo-green.svg')
   } else {
     header.classList.remove('active');
     logo.setAttribute('src', 'assets/logo-white.svg')
   }
 })
-
 
 // copyright date 
 const copyrightYear = document.getElementById('copyright-year')

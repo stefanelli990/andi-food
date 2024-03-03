@@ -64,11 +64,11 @@ button {
 
 /* header */
 #header {
-    padding: 24px 0;
+    padding: 12px 0;
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
+    width: 100%;
     z-index: 10;
     transition: .3s;
 }
@@ -77,11 +77,8 @@ button {
     background-color: var(--offwhite-color);
     padding: 12px 0;
 }
-#header.active .nav-link {
-    color: var(--dark-color);
-}
-#header.active .open-menu-btn path {
-    stroke: var(--dark-color);
+#header.active .toggle-bars {
+    background-color: var(--dark-color);
 }
 #header .container {
     display: flex;
@@ -89,15 +86,27 @@ button {
     align-items: center;
 }
 #header .nav-links {
-    display: none;
+    top: 80px;
+    left: 0;
+    width: 100%;
     gap: 16px;
-    position: relative
+    position: absolute;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    background-color: var(--primary-color);
+    overflow: hidden;
+}
+
+#header .nav-links.active {
+    max-height: 240px;
 }
 
 #header .nav-link {
     color: var(--white-color);
     position: relative;
-    
+    padding: 16px;
+    display: block;
+    border-bottom: 1px solid #6d8d54;
 }
 
 #header .nav-link:hover:after  {
@@ -118,52 +127,26 @@ button {
     transition: .3s;
 }
 
-/* hamburger menu */
-.hamburger-menu {
-    padding: 24px;
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: var(--primary-color);
-    width: 70%;
-    height: 100%;
-    transform: translateX(100%);
+.toggle-btn {
     display: flex;
-    justify-content: flex-end;
-    text-align: right;
-    transition: .3s;
-    z-index: 12;
-}
-.hamburger-menu.active {
-    transform: translateX(0);
-}
-.hamburger-menu li:nth-of-type(2) {
-    margin-top: 100px;
-}
-.hamburger-menu ul {
-    display: flex; 
     flex-direction: column;
-    gap: 28px;
+    gap: 6px;
 }
-.hamburger-menu a {
-    color: var(--white-color);
-    font-size: 20px;
-}
-.hamburger-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #000;
-    opacity: 0;
+ .toggle-bars {
+    height: 2px;
+    width: 25px;
+    background-color: var(--white-color);
+    border-radius: 50px;
     transition: .3s;
-    visibility: hidden;
-    height: 100%;
-    width: 100%;
-    z-index: 11;
 }
-.hamburger-overlay.active {
-    visibility: visible;
-    opacity: .50;
+.toggle-btn.active .bar-1 {
+    transform: rotate(-45deg) translate(-7px, 4px);
+}
+.toggle-btn.active .bar-2 {
+    opacity: 0;
+}
+.toggle-btn.active .bar-3 {
+    transform: rotate(45deg) translate(-7px, -4px);
 }
 
 /* hero */
@@ -186,7 +169,8 @@ button {
     min-height: 100vh;
 }
 #hero .hero-content {
-    max-width: 555px;
+    
+    text-align: center;
 }
 #hero .btn {
     margin-top: 24px;
@@ -428,10 +412,7 @@ button {
     }
 }
     @media(min-width: 600px) {
-    .hamburger-overlay,
-    .hamburger-menu {
-        display: none;
-    }
+    
     .container {
         max-width: 600px;
     }
@@ -441,12 +422,27 @@ button {
     #header {
         background-color: transparent;
         box-shadow: none;
+        padding: 24px 0;
     }
-    #header .open-menu-btn {
+    #header .toggle-btn {
         display: none;
     }
     #header .nav-links {
         display: flex;
+        overflow: visible;
+        position: static;
+        top: auto;
+        left: auto;
+        width: unset;
+        max-height: unset;
+        background-color: unset;
+    }
+    #header .nav-link {
+        border-bottom: none;
+        padding: 0;
+    }
+    #header.active .nav-link {
+        color: var(--dark-color);
     }
     #footer .container {
         flex-direction: row;
@@ -456,6 +452,10 @@ button {
 @media(min-width: 768px) {
     .container {
         max-width: 768px;
+    }
+    #hero .hero-content {
+        text-align: left;
+        max-width: 555px;
     }
     #contact .container {
        flex-direction: row;
