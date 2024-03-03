@@ -23,7 +23,7 @@ body {
     color: var(--dark-color);
     font-weight: 500;
 }
-h1, h2, h4 {
+h1, h2, h3 {
     font-family: 'Bitter', serif;
     font-weight: 800;
 }
@@ -37,12 +37,6 @@ h2 {
     font-size: 36px;
 }
 h3 {
-    font-family: 'Caveat', serif;
-    color: var(--primary-color);
-    font-size: 36px;
-    font-weight: bold;
-}
-h4 {
     font-size: 24px;
     margin-bottom: 12px
 }
@@ -60,6 +54,13 @@ button {
     background-color: transparent;
     border: none;
     cursor: pointer;
+}
+
+.above-heading {
+    font-family: 'Caveat', serif;
+    color: var(--primary-color);
+    font-size: 36px;
+    font-weight: bold;
 }
 
 /* header */
