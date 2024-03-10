@@ -1,7 +1,7 @@
 :root {
     --primary-color: #749958;
     --primary-color-hover: #577441;
-    --primary-color-1: #EFF7E8;
+    --primary-color-light: #EFF7E8;
     --dark-color: #333333;
     --offwhite-color: #F9F9F9;
     --white-color: #fff;
@@ -18,10 +18,11 @@ html {
     box-sizing: border-box;
 }
 body {
-    font-family: "Nunito", sans-serif;
+    font-family: 'Nunito', sans-serif;
     background-color: var(--offwhite-color);
     color: var(--dark-color);
     font-weight: 500;
+    overflow-x: hidden;
 }
 h1, h2, h3 {
     font-family: 'Bitter', serif;
@@ -111,7 +112,7 @@ button {
 }
 
 #header .nav-link:hover:after  {
-    width: 40px;
+    width: 25px;
 }
 
 #header .nav-link::after {
@@ -191,7 +192,7 @@ button {
 
 /* benefits */
 #benefits {
-    background-color: var(--primary-color-1);
+    background-color: var(--primary-color-light);
     background-image: url('../assets/benefits-img.webp');
     padding: 50px 0;
 }
@@ -212,7 +213,6 @@ button {
 /* services */
 #services {
     padding: 50px 0 90px;
-    overflow-x: hidden;
 }
 #services ul {
     display: flex;
