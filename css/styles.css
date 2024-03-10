@@ -22,7 +22,6 @@ body {
     background-color: var(--offwhite-color);
     color: var(--dark-color);
     font-weight: 500;
-    overflow-x: hidden;
 }
 h1, h2, h3 {
     font-family: 'Bitter', serif;
@@ -418,7 +417,7 @@ button {
         max-width: 600px;
     }
     h1 {
-        font-size: 62px;
+        font-size: 40px;
     }
     #header {
         background-color: transparent;

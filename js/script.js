@@ -59,8 +59,3 @@ const d = new Date()
 let year = d.getFullYear()
 
 copyrightYear.innerText = year
-
-// aos animation
-AOS.init({
-  duration: 800,
-})
